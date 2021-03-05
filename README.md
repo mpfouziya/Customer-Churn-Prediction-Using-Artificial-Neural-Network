@@ -7,8 +7,6 @@
 
 Customer churn prediction is to measure why customers are leaving a business. I am using here Telco Customer Data from Kaggle. Will build a deep learning model to predict the churn and use precision, recall, f1-score to measure performance of the model.
 
-
-
 ## Steps:
 
 1. Data Collection : Here I had used the [Telco Customer Data from Kaggle](https://www.kaggle.com/blastchar/telco-customer-churn). 
@@ -23,7 +21,7 @@ Customer churn prediction is to measure why customers are leaving a business. I 
 
 # Results
 
-For the customer churn prediction, we need to reduce the False Negative (ie. prediction will not churn by mistake). Therefore, need to improve recall. Here we got a recall of 74% for our model.
+For the customer churn prediction, we need to reduce the False Negative (ie. prediction will not churn by mistake). Therefore, need to improve recall. Here we got a recall of 74% for our model. You can see the whole pipeline [here](https://github.com/mpfouziya/Customer-Churn-Prediction-Using-Artificial-Neural-Network/blob/main/Customer_Churn_Prediction_Using_ANN.ipynb) 
 
 <p align="center">
 <img width="500" alt="postgreSQL" src="https://user-images.githubusercontent.com/37532698/110117923-03c8e100-7dd3-11eb-9a75-bde263530cd1.jpg"></p> 
