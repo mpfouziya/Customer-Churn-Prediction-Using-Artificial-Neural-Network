@@ -9,18 +9,24 @@ Customer churn prediction is to measure why customers are leaving a business. I 
 
 
 
-## Technical Aspect
-This project is divided into two part:
-1. Creating the front end using [HTML](https://github.com/mpfouziya/Customer-Feedabck-Web-Application-Using-Python-PostgreSQL-Flask-and-Heroku/tree/main/CustomerFeedbackApp/template) and [CSS](https://github.com/mpfouziya/Customer-Feedabck-Web-Application-Using-Python-PostgreSQL-Flask-and-Heroku/tree/main/CustomerFeedbackApp/static). Use SQLAlchemy as a layer of abstraction to PostgreSQL from Python.
-2. Sending the input data to a designated mail address. Code : [send_mail.py](https://github.com/mpfouziya/Customer-Feedabck-Web-Application-Using-Python-PostgreSQL-Flask-and-Heroku/blob/main/CustomerFeedbackApp/send_mail.py) 
-3. Building and hosting the Flask web app on Heroku.
-    
+## Steps:
 
-## Installation
-The Code is written in Python 3.9.1 If you don't have Python installed you can find it [here](https://www.python.org/downloads/). If you are using a lower version of Python you can upgrade using the pip package, ensuring you have the latest version of pip. To install the required packages and libraries, run this command in the project directory after [cloning](https://www.howtogeek.com/451360/how-to-clone-a-github-repository/) the repository:
-```bash
-pip install -r requirements.txt
-```
+1. Data Collection : Here I had used the [Telco Customer Data from Kaggle](https://www.kaggle.com/blastchar/telco-customer-churn). 
+2. Preprocess the data
+    -  Convert the nominal and ordinal categorical values into numbers.
+    -  Created dummy variables for categorical features having more than two categories.
+    -  Train Test Split. Further preprocessing is done after the split to avoid data leakage.
+    -  Feature scaling using min max scaling is done seperately for train and test data
+    -  Oversampling using SMOTE to deal with class imbalance, as Churn=0 class is much more than Churn=1 
+4. Create a Dense Artificial Neural Network with Dropout for regularization.
+5. Do prediction for the test data and plot the output. Check the performance metrics.
+
+# Results
+
+For the customer churn prediction, we need to reduce the False Negative (ie. prediction will not churn by mistake). Therefore, need to improve recall. Here we got a recall of 74% for our model.
+
+<p align="center">
+<img width="500" alt="postgreSQL" src="https://user-images.githubusercontent.com/37532698/110117923-03c8e100-7dd3-11eb-9a75-bde263530cd1.jpg"></p> 
 
 ## Technologies Used
 
